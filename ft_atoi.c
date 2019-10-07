@@ -6,7 +6,7 @@
 /*   By: mle-moni <mle-moni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 15:04:44 by mle-moni          #+#    #+#             */
-/*   Updated: 2019/10/07 15:39:16 by mle-moni         ###   ########.fr       */
+/*   Updated: 2019/10/07 15:47:54 by mle-moni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 int	my_isspace(char c)
 {
-	if (c == '\t' || c == '\n' || c == '\r' || c == '\v' || '\f' || c == ' ')
+	if (c == '\t' || c == '\n' || c == '\r' || c == '\v' || c == '\f' || c == ' ')
 		return (1);
 	return (0);
 }
 
-int my_isnum(char c)
+int	my_isnum(char c)
 {
 	if (c <= '9' && c >= '0')
 		return (1);
