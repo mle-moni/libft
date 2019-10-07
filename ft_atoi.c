@@ -6,15 +6,16 @@
 /*   By: mle-moni <mle-moni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 15:04:44 by mle-moni          #+#    #+#             */
-/*   Updated: 2019/10/07 15:47:54 by mle-moni         ###   ########.fr       */
+/*   Updated: 2019/10/07 16:27:36 by mle-moni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdlib.h"
+#include "libft.h"
 
 int	my_isspace(char c)
 {
-	if (c == '\t' || c == '\n' || c == '\r' || c == '\v' || c == '\f' || c == ' ')
+	if (c == '\t' || c == '\n' || c == '\r' ||
+	c == '\v' || c == '\f' || c == ' ')
 		return (1);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: mle-moni <mle-moni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 11:37:36 by mle-moni          #+#    #+#             */
-/*   Updated: 2019/10/07 11:52:54 by mle-moni         ###   ########.fr       */
+/*   Updated: 2019/10/07 16:27:16 by mle-moni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	tmp = 0;
 	while (i < (int)n)
 	{
-		dest_assign[i] = ((char*)src)[i];
+		dest_assign[i] = ((unsigned char*)src)[i];
 		i++;
 	}
 	return (dest);
