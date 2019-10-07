@@ -6,7 +6,7 @@
 /*   By: mle-moni <mle-moni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 11:52:22 by mle-moni          #+#    #+#             */
-/*   Updated: 2019/10/07 12:08:53 by mle-moni         ###   ########.fr       */
+/*   Updated: 2019/10/07 12:40:03 by mle-moni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 		dest_assign[i] = ((char*)src)[i];
 		if ((int)((char*)src)[i] == c)
 		{
-			return (src + i + 1);
+			return (((void*)src) + i + 1);
 		}
 		i++;
 	}

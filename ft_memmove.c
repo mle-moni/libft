@@ -6,7 +6,7 @@
 /*   By: mle-moni <mle-moni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 12:10:11 by mle-moni          #+#    #+#             */
-/*   Updated: 2019/10/07 12:18:18 by mle-moni         ###   ########.fr       */
+/*   Updated: 2019/10/07 12:45:03 by mle-moni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,11 @@
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	n--;
-	while (n >= 0)
+	while (1)
 	{
 		((char*)dest)[n] = ((char*)src)[n];
 		n--;
+		if (n == 0)
+			return (dest);
 	}
-	return (dest);
 }

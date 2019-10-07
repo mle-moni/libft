@@ -6,7 +6,7 @@
 /*   By: mle-moni <mle-moni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 11:25:12 by mle-moni          #+#    #+#             */
-/*   Updated: 2019/10/07 11:52:32 by mle-moni         ###   ########.fr       */
+/*   Updated: 2019/10/07 12:38:46 by mle-moni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_bzero(void *s, size_t n)
 
 	i = 0;
 	s_assign = s;
-	while (i < n)
+	while ((size_t)i < n)
 	{
 		s_assign[i] = '\0';
 		i++;
