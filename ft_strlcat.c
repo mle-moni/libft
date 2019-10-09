@@ -6,7 +6,7 @@
 /*   By: mle-moni <mle-moni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 14:23:05 by mle-moni          #+#    #+#             */
-/*   Updated: 2019/10/09 11:50:21 by mle-moni         ###   ########.fr       */
+/*   Updated: 2019/10/09 13:51:34 by mle-moni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int	str_len(const char *str)
 	return (i);
 }
 
-size_t		strlcat(char *dst, const char *src, size_t dstsize)
+size_t		ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t len;
 	size_t i;
