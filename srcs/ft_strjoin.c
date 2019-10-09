@@ -6,13 +6,13 @@
 /*   By: mle-moni <mle-moni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 16:46:46 by mle-moni          #+#    #+#             */
-/*   Updated: 2019/10/07 17:00:39 by mle-moni         ###   ########.fr       */
+/*   Updated: 2019/10/09 11:49:59 by mle-moni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		length(const char *str)
+static int	length(const char *str)
 {
 	int i;
 
@@ -22,7 +22,7 @@ int		length(const char *str)
 	return (i);
 }
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char		*ft_strjoin(char const *s1, char const *s2)
 {
 	int		i;
 	int		j;

@@ -6,13 +6,13 @@
 /*   By: mle-moni <mle-moni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 17:22:38 by mle-moni          #+#    #+#             */
-/*   Updated: 2019/10/07 17:32:13 by mle-moni         ###   ########.fr       */
+/*   Updated: 2019/10/09 11:49:34 by mle-moni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		word_count(const char *str, char c)
+static int	word_count(const char *str, char c)
 {
 	int i;
 	int word;
@@ -40,7 +40,7 @@ int		word_count(const char *str, char c)
 	return (word ? num_word + 1 : num_word);
 }
 
-char	*dupn(const char *str, int n)
+static char	*dupn(const char *str, int n)
 {
 	int		i;
 	char	*new;
@@ -58,7 +58,7 @@ char	*dupn(const char *str, int n)
 	return (new);
 }
 
-void	process(char **final, const char *str, char c, int *index)
+static void	process(char **final, const char *str, char c, int *index)
 {
 	int i;
 	int is_word;
@@ -84,7 +84,7 @@ void	process(char **final, const char *str, char c, int *index)
 		final[(*index)++] = dupn(str + i - is_word, is_word);
 }
 
-char	**ft_split(char const *s, char c)
+char		**ft_split(char const *s, char c)
 {
 	char	**final;
 	int		words;

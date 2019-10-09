@@ -6,13 +6,13 @@
 /*   By: mle-moni <mle-moni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 14:33:13 by mle-moni          #+#    #+#             */
-/*   Updated: 2019/10/07 15:49:30 by mle-moni         ###   ########.fr       */
+/*   Updated: 2019/10/09 11:50:52 by mle-moni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		length(const char *str)
+static int	length(const char *str)
 {
 	int i;
 
@@ -22,7 +22,7 @@ int		length(const char *str)
 	return (i);
 }
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char		*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
 	int		find_index;

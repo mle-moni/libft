@@ -6,13 +6,13 @@
 /*   By: mle-moni <mle-moni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 17:02:37 by mle-moni          #+#    #+#             */
-/*   Updated: 2019/10/07 17:20:54 by mle-moni         ###   ########.fr       */
+/*   Updated: 2019/10/09 11:51:26 by mle-moni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		isfromstr(char const *set, char c)
+static int	isfromstr(char const *set, char c)
 {
 	int i;
 
@@ -26,7 +26,7 @@ int		isfromstr(char const *set, char c)
 	return (0);
 }
 
-int		my_count(char const *s1, char const *set)
+static int	my_count(char const *s1, char const *set)
 {
 	int i;
 	int c;
@@ -42,7 +42,7 @@ int		my_count(char const *s1, char const *set)
 	return (c);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+char		*ft_strtrim(char const *s1, char const *set)
 {
 	int		count;
 	char	*str;
