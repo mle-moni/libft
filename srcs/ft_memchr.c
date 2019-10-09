@@ -6,7 +6,7 @@
 /*   By: mle-moni <mle-moni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 12:21:45 by mle-moni          #+#    #+#             */
-/*   Updated: 2019/10/07 12:40:40 by mle-moni         ###   ########.fr       */
+/*   Updated: 2019/10/09 12:09:31 by mle-moni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (((const char*)s)[i] == (unsigned char)c)
+		if (((const unsigned char*)s)[i] == (unsigned char)c)
 		{
 			return (((void*)s) + i);
 		}
