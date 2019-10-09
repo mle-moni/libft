@@ -6,7 +6,7 @@
 /*   By: mle-moni <mle-moni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 15:04:44 by mle-moni          #+#    #+#             */
-/*   Updated: 2019/10/09 11:48:20 by mle-moni         ###   ########.fr       */
+/*   Updated: 2019/10/09 14:38:23 by mle-moni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ int			ft_atoi(const char *nptr)
 		sign = -1;
 		i++;
 	}
+	else if (nptr[i] == '+')
+		i++;
 	while (my_isnum(nptr[i]))
 	{
 		res = (res * 10) + (nptr[i] - '0');

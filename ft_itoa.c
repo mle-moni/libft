@@ -6,7 +6,7 @@
 /*   By: mle-moni <mle-moni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 10:12:53 by mle-moni          #+#    #+#             */
-/*   Updated: 2019/10/09 11:48:03 by mle-moni         ###   ########.fr       */
+/*   Updated: 2019/10/09 15:29:29 by mle-moni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static void	reverse_str(char *str)
 	while (str[len])
 		len++;
 	len--;
-	while (i < len / 2)
+	while (i <= len / 2)
 	{
 		tmp = str[i];
 		str[i] = str[len - i];
@@ -51,7 +51,7 @@ static void	reverse_str(char *str)
 	}
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	char		*str;
 	long int	num;
