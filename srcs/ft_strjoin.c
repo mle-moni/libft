@@ -6,7 +6,7 @@
 /*   By: mle-moni <mle-moni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 16:46:46 by mle-moni          #+#    #+#             */
-/*   Updated: 2019/10/09 11:49:59 by mle-moni         ###   ########.fr       */
+/*   Updated: 2019/10/09 12:17:36 by mle-moni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char		*ft_strjoin(char const *s1, char const *s2)
 	}
 	while (s2[j])
 	{
-		str[i + j] = s2[i];
+		str[i + j] = s2[j];
 		j++;
 	}
 	str[i + j] = '\0';
