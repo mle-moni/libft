@@ -6,13 +6,13 @@
 /*   By: mle-moni <mle-moni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 10:12:53 by mle-moni          #+#    #+#             */
-/*   Updated: 2019/10/08 15:18:09 by mle-moni         ###   ########.fr       */
+/*   Updated: 2019/10/09 11:42:54 by mle-moni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		char_count(int n)
+int		char_count(long int n)
 {
 	int i;
 
@@ -59,9 +59,9 @@ char	*ft_itoa(int n)
 
 	i = 0;
 	num = (long int)n;
+	str = malloc((char_count(num) + 1) * sizeof(char));
 	if (num < 0)
 		num = -num;
-	str = malloc((char_count(n) + 1) * sizeof(char));
 	while (num > 9)
 	{
 		str[i++] = (num % 10) + '0';
