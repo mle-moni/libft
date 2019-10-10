@@ -6,7 +6,7 @@
 /*   By: mle-moni <mle-moni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 17:02:37 by mle-moni          #+#    #+#             */
-/*   Updated: 2019/10/09 11:51:26 by mle-moni         ###   ########.fr       */
+/*   Updated: 2019/10/10 11:13:10 by mle-moni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,44 +26,39 @@ static int	isfromstr(char const *set, char c)
 	return (0);
 }
 
-static int	my_count(char const *s1, char const *set)
+static int	length(const char *str)
 {
 	int i;
-	int c;
 
-	c = 0;
 	i = 0;
-	while (s1[i])
-	{
-		if (!isfromstr(set, s1[i]))
-			c++;
+	while (str[i])
 		i++;
-	}
-	return (c);
+	return (i);
 }
 
 char		*ft_strtrim(char const *s1, char const *set)
 {
-	int		count;
-	char	*str;
 	int		i;
-	int		str_i;
+	char	*str;
+	int		len;
 
 	i = 0;
-	str_i = 0;
-	count = my_count(s1, set);
-	str = malloc(sizeof(char) * (count + 1));
-	if (!str)
+	if (!(str = malloc(length(s1) + 1)))
 		return (NULL);
 	while (s1[i])
 	{
-		if (!isfromstr(set, s1[i]))
-		{
-			str[str_i] = s1[i];
-			str_i++;
-		}
+		str[i] = s1[i];
 		i++;
 	}
-	str[str_i] = '\0';
+	str[i] = '\0';
+	i = 0;
+	while (isfromstr(set, str[0]))
+		str++;
+	len = length(str);
+	while (isfromstr(set, str[len - 1]))
+	{
+		str[len - 1] = '\0';
+		len--;
+	}
 	return (str);
 }
