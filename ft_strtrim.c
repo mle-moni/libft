@@ -6,7 +6,7 @@
 /*   By: mle-moni <mle-moni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 17:02:37 by mle-moni          #+#    #+#             */
-/*   Updated: 2019/10/10 11:13:10 by mle-moni         ###   ########.fr       */
+/*   Updated: 2019/10/10 17:06:49 by mle-moni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,25 +40,25 @@ char		*ft_strtrim(char const *s1, char const *set)
 {
 	int		i;
 	char	*str;
+	char	*final;
 	int		len;
+	int		malloc_size;
 
 	i = 0;
-	if (!(str = malloc(length(s1) + 1)))
-		return (NULL);
-	while (s1[i])
-	{
-		str[i] = s1[i];
-		i++;
-	}
-	str[i] = '\0';
-	i = 0;
+	str = (char*)s1;
+	malloc_size = 0;
 	while (isfromstr(set, str[0]))
 		str++;
 	len = length(str);
 	while (isfromstr(set, str[len - 1]))
-	{
-		str[len - 1] = '\0';
 		len--;
+	if (!(final = malloc(malloc_size)))
+		return (NULL);
+	while (i < len)
+	{
+		final[i] = str[i];
+		i++;
 	}
-	return (str);
+	final[i] = '\0';
+	return (final);
 }
