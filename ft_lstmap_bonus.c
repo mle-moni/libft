@@ -6,7 +6,7 @@
 /*   By: mle-moni <mle-moni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 12:05:37 by mle-moni          #+#    #+#             */
-/*   Updated: 2019/10/10 14:54:01 by mle-moni         ###   ########.fr       */
+/*   Updated: 2019/10/10 16:23:00 by mle-moni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@ t_list		*ft_lstmap(t_list *lst, t_list *(*f)(void*))
 	t_list *new_lst;
 	t_list *next_item;
 
-	new_lst = f(lst);
+	new_lst = f(lst->content);
 	next_item = new_lst;
 	if (!lst)
 		return (new_lst);
 	lst = lst->next;
 	while (lst)
 	{
-		next_item->next = f(lst);
+		next_item->next = f(lst->content);
 		lst = lst->next;
 		next_item = next_item->next;
 	}
