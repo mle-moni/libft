@@ -6,7 +6,7 @@
 /*   By: mle-moni <mle-moni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 10:12:53 by mle-moni          #+#    #+#             */
-/*   Updated: 2019/10/09 15:29:29 by mle-moni         ###   ########.fr       */
+/*   Updated: 2019/10/13 12:15:29 by mle-moni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,8 @@ char		*ft_itoa(int n)
 
 	i = 0;
 	num = (long int)n;
-	str = malloc((char_count(num) + 1) * sizeof(char));
+	if (!(str = malloc(char_count(num) + 1)))
+		return (NULL);
 	if (num < 0)
 		num = -num;
 	while (num > 9)
