@@ -6,7 +6,7 @@
 /*   By: mle-moni <mle-moni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 11:58:12 by mle-moni          #+#    #+#             */
-/*   Updated: 2019/10/13 12:59:09 by mle-moni         ###   ########.fr       */
+/*   Updated: 2019/10/13 13:43:11 by mle-moni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list *last;
 
+	if (!lst || !del)
+		return ;
 	while (*lst)
 	{
 		last = *lst;
@@ -23,4 +25,5 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		del(last->content);
 		free(last);
 	}
+	*lst = NULL;
 }
