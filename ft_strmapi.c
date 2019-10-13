@@ -6,7 +6,7 @@
 /*   By: mle-moni <mle-moni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 11:44:29 by mle-moni          #+#    #+#             */
-/*   Updated: 2019/10/13 12:05:46 by mle-moni         ###   ########.fr       */
+/*   Updated: 2019/10/13 12:10:40 by mle-moni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	while (s[i])
 		i++;
-	str_total = malloc((i + 1) * sizeof(char));
-	if (!str_total)
+	if (!(str_total = malloc(i + 1)))
 		return (NULL);
 	i = 0;
 	while (s[i])
