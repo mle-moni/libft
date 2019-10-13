@@ -6,7 +6,7 @@
 /*   By: mle-moni <mle-moni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 17:02:37 by mle-moni          #+#    #+#             */
-/*   Updated: 2019/10/13 12:23:01 by mle-moni         ###   ########.fr       */
+/*   Updated: 2019/10/13 12:28:07 by mle-moni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ char		*ft_strtrim(char const *s1, char const *set)
 	while (isfromstr(set, str[0]))
 		str++;
 	len = length(str);
-	while (isfromstr(set, str[len - 1]))
+	while (len != 0 && isfromstr(set, str[len - 1]))
 		len--;
 	if (!(final = malloc(len + 1)))
 		return (NULL);
