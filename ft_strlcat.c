@@ -6,7 +6,7 @@
 /*   By: mle-moni <mle-moni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 14:23:05 by mle-moni          #+#    #+#             */
-/*   Updated: 2019/10/09 13:51:34 by mle-moni         ###   ########.fr       */
+/*   Updated: 2019/10/15 15:10:48 by mle-moni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,23 +22,25 @@ static int	str_len(const char *str)
 	return (i);
 }
 
-size_t		ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t		ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t len;
 	size_t i;
 	size_t j;
+	size_t k;
 
+	i = 0;
 	j = 0;
-	len = str_len(dst);
-	i = len;
-	if (dstsize < len)
-		return (str_len(src) + dstsize);
-	while (j + 1 < dstsize - len && src[j])
-	{
-		dst[i] = src[j];
-		j++;
+	k = str_len(src);
+	while (dst[i] && i < size)
 		i++;
+	if (!dst[i] && i < size)
+	{
+		while (src[j] && j + i < size - 1)
+		{
+			dst[i + j] = src[j];
+			j++;
+		}
+		dst[i + j] = '\0';
 	}
-	dst[i] = '\0';
-	return (len + str_len(src));
+	return (i + k);
 }
