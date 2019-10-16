@@ -6,7 +6,7 @@
 /*   By: mle-moni <mle-moni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 16:17:31 by mle-moni          #+#    #+#             */
-/*   Updated: 2019/10/11 10:54:30 by mle-moni         ###   ########.fr       */
+/*   Updated: 2019/10/15 15:37:31 by mle-moni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char				*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 
 	i = 0;
-	if (start > length(s) || (start + len) > length(s))
+	if (start > length(s))
 	{
 		str = malloc(1);
 		str[0] = '\0';
