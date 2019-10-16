@@ -6,7 +6,7 @@
 /*   By: mle-moni <mle-moni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 11:52:01 by mle-moni          #+#    #+#             */
-/*   Updated: 2019/10/13 12:59:01 by mle-moni         ###   ########.fr       */
+/*   Updated: 2019/10/16 13:46:41 by mle-moni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	del(lst->content);
+	if (del)
+		del(lst->content);
 	free(lst);
 }
