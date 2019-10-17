@@ -6,7 +6,7 @@
 /*   By: mle-moni <mle-moni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 14:07:55 by mle-moni          #+#    #+#             */
-/*   Updated: 2019/10/09 14:09:30 by mle-moni         ###   ########.fr       */
+/*   Updated: 2019/10/17 14:42:28 by mle-moni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t dest_len;
 	size_t src_len;
 
+	if (!src)
+		return (0);
 	src_len = str_len(src);
 	dest_len = str_len(dst);
 	i = 0;
