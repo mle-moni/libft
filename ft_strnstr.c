@@ -6,7 +6,7 @@
 /*   By: mle-moni <mle-moni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 14:33:13 by mle-moni          #+#    #+#             */
-/*   Updated: 2019/10/17 14:08:58 by mle-moni         ###   ########.fr       */
+/*   Updated: 2019/10/17 14:52:26 by mle-moni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,9 @@ static size_t	length(const char *str)
 
 static int		is_same(const char *start, const char *str, size_t len)
 {
-	size_t i = 0;
+	size_t i;
 
+	i = 0;
 	while (start[i] && str[i] && (start[i] == str[i]) && i < len)
 	{
 		i++;
