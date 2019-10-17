@@ -6,13 +6,13 @@
 /*   By: mle-moni <mle-moni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 14:33:13 by mle-moni          #+#    #+#             */
-/*   Updated: 2019/10/09 11:50:52 by mle-moni         ###   ########.fr       */
+/*   Updated: 2019/10/17 14:08:58 by mle-moni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	length(const char *str)
+static size_t	length(const char *str)
 {
 	int i;
 
@@ -22,26 +22,36 @@ static int	length(const char *str)
 	return (i);
 }
 
-char		*ft_strnstr(const char *haystack, const char *needle, size_t len)
+static int		is_same(const char *start, const char *str, size_t len)
+{
+	size_t i = 0;
+
+	while (start[i] && str[i] && (start[i] == str[i]) && i < len)
+	{
+		i++;
+	}
+	if (length(str) == i)
+		return (1);
+	return (0);
+}
+
+char			*ft_strnstr(const char *haystack,
+const char *needle, size_t len)
 {
 	size_t	i;
 	int		find_index;
 
 	i = 0;
 	find_index = 0;
-	while (i < len && haystack[i] && needle[find_index])
+	if (length(needle) == 0)
 	{
-		if (haystack[i] == needle[find_index])
-		{
-			find_index++;
-		}
-		else
-		{
-			find_index = 0;
-		}
+		return ((char*)haystack);
+	}
+	while (i < len && haystack[i])
+	{
+		if (is_same(haystack + i, needle, len - i))
+			return ((char *)(haystack + i));
 		i++;
 	}
-	if (find_index == length(needle))
-		return (((char*)haystack) + i - find_index);
 	return (0);
 }
