@@ -14,13 +14,11 @@
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	int				tmp;
 	int				i;
 	unsigned char	*dest_assign;
 
 	dest_assign = dest;
 	i = 0;
-	tmp = 0;
 	while (i < (int)n)
 	{
 		dest_assign[i] = ((unsigned char*)src)[i];

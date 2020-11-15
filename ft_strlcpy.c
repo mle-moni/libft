@@ -25,13 +25,11 @@ static int	str_len(const char *str)
 size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t i;
-	size_t dest_len;
 	size_t src_len;
 
 	if (!src)
 		return (0);
 	src_len = str_len(src);
-	dest_len = str_len(dst);
 	i = 0;
 	if (dstsize == 0)
 		return (src_len);

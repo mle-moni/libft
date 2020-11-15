@@ -40,10 +40,8 @@ char			*ft_strnstr(const char *haystack,
 const char *needle, size_t len)
 {
 	size_t	i;
-	int		find_index;
 
 	i = 0;
-	find_index = 0;
 	if (length(needle) == 0)
 	{
 		return ((char*)haystack);
